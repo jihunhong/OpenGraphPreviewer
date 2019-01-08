@@ -1,0 +1,30 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "ogpreviewer",
+                "projectName": "ogpreviewer",
+                "workingDirectory": "d:\\vscode\\ogpreviewer",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "ogpreviewer",
+                "projectName": "ogpreviewer",
+                "workingDirectory": "d:\\vscode\\ogpreviewer",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
