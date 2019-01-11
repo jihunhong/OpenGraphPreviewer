@@ -1,0 +1,74 @@
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+.big_color {
+  width: 100vw;
+  height: 100vh;
+  background: #33CCCC;
+  background: -o-linear-gradient(bottom left, top right, #2e2f3c, #1a82f7);
+  background: -moz-linear-gradient(bottom right, #2e2f3c, #1a82f7);
+  background: -webkit-gradient(linear, bottom left, right top, from(#2e2f3c), to(#1a82f7));
+  background: -webkit-linear-gradient(bottom left, #2e2f3c, #1a82f7);
+  background: linear-gradient(to top right, #2e2f3c, #1a82f7);
+}
+
+.sns_btn {
+  display: inline-block;
+  color: #fff;
+  height: 3em;
+  width: 3em;
+  position: relative;
+  font-size: 1.5em;
+  border-radius: 0.3125em;
+  box-shadow: 0 0.1875em 0.3125em 0 rgba(0, 0, 0, 0.35);
+  margin: 0.2em;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+  overflow: hidden;
+}
+.sns_btn i {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: auto;
+}
+.sns_btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0.3125em 0.9375em 0 rgba(0, 0, 0, 0.4);
+}
+.sns_btn:active {
+  transform: scale(0.9);
+  box-shadow: 0 0.125em 0.1875em 0 rgba(0, 0, 0, 0.4);
+}
+
+.btn_facebook {
+  background: #3b5998;
+}
+.btn_facebook:hover {
+  color: #3b5998;
+  background: #fff;
+}
+
+.btn_twitter {
+  background: #55acee;
+}
+.btn_twitter:hover {
+  color: #55acee;
+  background: #fff;
+}
+
+.btn_kakaotalk {
+  background: #ffeb00;
+}
+.btn_kakaotalk:hover {
+  background: #ffeb00;
+  background: #fff;
+}
+
+.btn_email {
+  background: #9F0303;
+}
+.btn_email:hover {
+  color: #9F0303;
+  background: #fff;
+}
