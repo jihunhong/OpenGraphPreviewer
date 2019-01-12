@@ -2,6 +2,8 @@ package me.vscode.ogpreviewer.Controller;
 
 import java.io.IOException;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -19,11 +21,11 @@ public class HomeController{
     }
 
     @RequestMapping("/search")
-    public String Search(Model model){
+    public String Search(Model model, HttpServletRequest request){
         String description = "";
         String image_url   = "";
         String title = "";
-        String url = "https://www.daum.net";
+        String url = request.getParameter("query");
         try{
 			
 
@@ -46,7 +48,7 @@ public class HomeController{
         model.addAttribute("title",title);
         model.addAttribute("url",url);
 
-        return "home";
+        return "search_result";
     }
 
 }

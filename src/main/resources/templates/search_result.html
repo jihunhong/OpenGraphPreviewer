@@ -166,6 +166,22 @@
             <!-- Content -->
             <div class="col-sm-10 col-lg-8 white-text mx-5 wow fadeIn" style="visibility: visible;animation-name: fadeIn;">
 
+              <div class="row prv_default mb-4 wow bounce" style="animation-name: bounce; visibility: visible;">
+                <div class="col-sm-8 offset-sm-2 mb-4">
+                  <div class="card cascading-admin-card">
+                    <div class="admin-up">
+                      <img th:src="${image_url}" class="card-img-top" style="border: 1px solid black;border-radius:5px;max-width: 180px;">
+                      <div class="data">
+                        <p th:text="${description}"></p>
+                        <h4><strong th:text="${title}"></strong></h4>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text" th:text="${url}">Better than last week (25%)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
 
               <div class="text-center col-sm-12 mb-4  d-md-block">
@@ -181,6 +197,21 @@
               <p class="text-center col-12 mb-4 d-none d-md-block">
                 <strong>CHECK YOUR OG-TAG ON YOUR WEBSITE</strong>
               </p>
+
+              <div class="text-center buttons_container wow flipInX animated" style="    animation-name: flipInX;">
+                <a class="sns_btn btn_facebook" href="#" rel="author">
+                  <i class="fa fa-facebook"></i>
+                </a>
+                <a class="sns_btn btn_twitter" href="#" rel="author">
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a class="sns_btn btn_kakaotalk" href="#" rel="author">
+                  <i class="xi-kakaotalk" style="color:#3c1e1e;"></i>
+                </a>
+                <a class="sns_btn btn_email" href="#" rel="author">
+                  <i class="fa fa-envelope"></i>
+                </a>
+              </div>
               <!-- Content -->
 
             </div>
