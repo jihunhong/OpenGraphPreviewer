@@ -1,0 +1,37 @@
+
+  .facebook_card {
+    width: 100%;
+    padding: 13px;
+    background: #fff;
+    border-radius: 5px;
+  }
+  
+  .facebook_card__header{
+    display: flex;
+    margin-bottom: 7px;
+  }
+  
+  .facebook_card__image {
+    margin-right: 5px;
+    border-radius:50%;
+  }
+  
+  .facebook_card__image img {
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .facebook_card__name{
+    color: #365899;
+    margin: 3px 0 0 0;
+    font-weight: 600;
+  }
+  
+  .facebook_card__time {
+    color: #90949c
+  }
+
+  .facebook_card__content{
+    color: black;
+  }
