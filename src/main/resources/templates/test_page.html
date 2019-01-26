@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+</head>
+    <body>
+        <ul>
+            <li th:each="key: ${map.keySet()}">
+                <span th:text="${key}"></span> = <span th:text="${map.get(key)}"></span>
+            </li>
+        </ul>
+        <h1 th:text="${title}">   </h1>
+        <h1 th:text="${a}">   </h1>
+    </body>
+</html>
