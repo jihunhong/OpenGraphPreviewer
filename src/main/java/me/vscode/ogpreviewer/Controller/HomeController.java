@@ -59,46 +59,38 @@ public class HomeController {
         return "search_result";
     }
 
-    @RequestMapping("/test")
-    public String test(Model model) {
-
-        return "test";
-    }
-
-    @RequestMapping("/test_result")
-    public String Test(Model model, HttpServletRequest request) {
+    @RequestMapping("/search")
+    public String Youtube(Model model, HttpServletRequest request) {
+        String description = "";
+        String image_url = "";
+        String title = "";
 
         String url = request.getParameter("query");
-        Map<String, String> map = new HashMap<>();
 
-        String title = "";
-        String a = "";
+        try {
 
-        try{
-            
             Document document = Jsoup.connect(url).get();
-            
-            Elements els = document.getElementsByClass("usertxt");
-            Element ac = document.select("nickname in").first();
 
-            a = ac.attr("title");
+            Element meta_description = document.select("meta[property=og:description]").first();
+            Element meta_image_url = document.select("meta[property=og:image]").first();
+            Element meta_title = document.select("meta[property=og:title]").first();
             
-            title = els.attr("title");
-            
-            for(Element el : els){
-                    map.put(el.data(), el.toString());
-            }
+            description = meta_description.attr("content");
+            image_url   = meta_image_url.attr("content");
+            title       = meta_title.attr("content");
 
-        }catch(Exception e){
-            e.printStackTrace();
+		}catch(IOException e){
+			e.printStackTrace();
         }
-
-        model.addAttribute("map", map);
-        model.addAttribute("title", title);
-        model.addAttribute("a", a);
-
-        return "test_page";
         
+        model.addAttribute("description",description);
+        model.addAttribute("image_url",image_url);
+        model.addAttribute("title",title);
+        model.addAttribute("url",url);
+
+        return "search_result";
     }
+
+    
 
 }
